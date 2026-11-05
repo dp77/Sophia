@@ -51,7 +51,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
   @override
   Widget build(BuildContext context) {
     final hasText = widget.controller.text.trim().isNotEmpty;
-    final accent = _isReport ? const Color(0xFFE8A0B4) : SophiaColors.champagne;
+    final accent = _isReport ? const Color(0xFFD99A98) : SophiaColors.champagne;
     return Padding(
       padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
       child: ClipRRect(
@@ -63,7 +63,7 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [const Color(0xFF221035).withValues(alpha: 0.96), SophiaColors.bgTop],
+                colors: [const Color(0xFF261512).withValues(alpha: 0.96), SophiaColors.bgTop],
               ),
               border: Border(top: BorderSide(color: accent.withValues(alpha: 0.45))),
             ),

@@ -148,7 +148,7 @@ class _CreateCard extends StatelessWidget {
           border: Border.all(color: Colors.white.withValues(alpha: 0.28)),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFF6B42A8).withValues(alpha: 0.9),
+              color: const Color(0xFF8C2F3C).withValues(alpha: 0.9),
               blurRadius: 40,
               spreadRadius: -18,
               offset: const Offset(0, 18),
@@ -597,7 +597,7 @@ class _PartnerCard extends StatelessWidget {
                         gradient: const LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
-                          colors: [Color(0xFF4A2780), Color(0xFF8E6BC0)],
+                          colors: [Color(0xFF5E1C27), Color(0xFFA8434F)],
                         ),
                         border: Border.all(
                           color: Colors.white.withValues(alpha: 0.3),
@@ -693,8 +693,8 @@ class _EmptyState extends StatelessWidget {
           center: const Alignment(0, -0.5),
           radius: 0.7,
           colors: [
-            const Color(0xFF8E6BC0).withValues(alpha: 0.3),
-            const Color(0xFF8E6BC0).withValues(alpha: 0),
+            const Color(0xFFA8434F).withValues(alpha: 0.3),
+            const Color(0xFFA8434F).withValues(alpha: 0),
           ],
         ),
       ),
@@ -762,7 +762,7 @@ class _EmptyState extends StatelessWidget {
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: const Color(0xFF6B42A8).withValues(alpha: 0.95),
+                        color: const Color(0xFF8C2F3C).withValues(alpha: 0.95),
                         blurRadius: 34,
                         spreadRadius: -14,
                         offset: const Offset(0, 16),
@@ -902,7 +902,7 @@ class _FloatingCards extends StatelessWidget {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFF6B42A8).withValues(alpha: 0.95),
+                      color: const Color(0xFF8C2F3C).withValues(alpha: 0.95),
                       blurRadius: 50,
                       spreadRadius: -18,
                       offset: const Offset(0, 26),

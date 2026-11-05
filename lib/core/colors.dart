@@ -18,20 +18,20 @@ import 'package:flutter/material.dart';
 //   static const Color textGray = Color(0xFF8E8E93);
 // }
 
-final Color darkBlue = Color(0xff0B0014);
-final Color darkPurple = Color(0xff1A0033);
-final Color violet = Color(0xff7B2FF7);
-final Color lightViolet = Color(0xff9A67FF);
-final Color extraLightViolet = Color(0xffCFB2FF);
-final Color lightPink = Color(0xffCC81FF);
+final Color darkBlue = Color(0xff140B0A);
+final Color darkPurple = Color(0xff1F1311);
+final Color violet = Color(0xff8C2F3C);
+final Color lightViolet = Color(0xffB4505C);
+final Color extraLightViolet = Color(0xffE6CF97);
+final Color lightPink = Color(0xffD99A98);
 final Color white = Color(0xffFFFFFF);
-final Color shadow = Color(0xff110020);
-final Color gray = Color(0xffB7B1BC);
-const Color gold1 = Color(0xFFF6D967);
-const Color gold2 = Color(0xFFFFEB83);
-const Color gold3 = Color(0xFFFFFFD7);
-const Color gold4 = Color(0xFFFFEB83);
-const Color gold5 = Color(0xFFF6D967);
+final Color shadow = Color(0xff0D0706);
+final Color gray = Color(0xffB8A48A);
+const Color gold1 = Color(0xFFC9A55C);
+const Color gold2 = Color(0xFFE6CF97);
+const Color gold3 = Color(0xFFF7EBC6);
+const Color gold4 = Color(0xFFE6CF97);
+const Color gold5 = Color(0xFFC9A55C);
 
 final bgGradient = LinearGradient(
   begin: Alignment.topCenter,

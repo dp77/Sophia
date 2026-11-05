@@ -21,11 +21,11 @@ import '../../../data/url_launcher_service.dart';
 import 'login_screen.dart';
 // ── Design tokens (Option C · photo carousel) ────────────────────────────────
 
-const _pink = Color(0xFFFF5FA2);
-const _gold = Color(0xFFF6D967);
-const _online = Color(0xFF4ADE80);
-const _muted = Color(0xFF8F8B8B);
-const _heroFade = Color(0xFF130026);
+const _pink = Color(0xFFD99A98);
+const _gold = Color(0xFFC9A55C);
+const _online = Color(0xFF9BC48A);
+const _muted = Color(0xFF9C8870);
+const _heroFade = Color(0xFF160C0A);
 const _sans = 'PlusJakartaSans';
 const _serif = 'PlayfairDisplay';
 const _ease = Cubic(0.2, 0.8, 0.2, 1);
@@ -445,7 +445,7 @@ class _PremiumUpgradeScreenState extends State<PremiumScreen>
                   fontSize: 12,
                   fontWeight: FontWeight.w700,
                   letterSpacing: 2,
-                  color: Color(0xFFCFB2FF),
+                  color: Color(0xFFE6CF97),
                 ),
               ),
             ],

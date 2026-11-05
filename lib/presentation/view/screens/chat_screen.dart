@@ -1481,9 +1481,9 @@ class _PremiumChatTile extends StatelessWidget {
     this.forPhoto = false,
   });
 
-  static const _gold = Color(0xFFF6D967);
-  static const _goldLight = Color(0xFFFFEB83);
-  static const _ink = Color(0xFF1A0033);
+  static const _gold = Color(0xFFC9A55C);
+  static const _goldLight = Color(0xFFE6CF97);
+  static const _ink = Color(0xFF1F1311);
 
   @override
   Widget build(BuildContext context) {
@@ -1546,9 +1546,9 @@ class _PremiumChatTile extends StatelessWidget {
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                         colors: [
-                          Color(0xFF2A1440),
+                          Color(0xFF2E1814),
                           SophiaColors.panelTop,
-                          Color(0xFF1B0D2B),
+                          Color(0xFF1F1311),
                         ],
                       ),
                     ),
@@ -1784,7 +1784,7 @@ class _PremiumChatTile extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         gradient: const LinearGradient(
-          colors: [_goldLight, _gold, Color(0xFFE2B95A)],
+          colors: [_goldLight, _gold, Color(0xFFA8843F)],
         ),
         boxShadow: [
           BoxShadow(

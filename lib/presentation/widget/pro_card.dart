@@ -7,11 +7,11 @@ import 'package:girlfriend/core/colors.dart';
 
 // "Sophia Pro" promo card — shared by Watch & Earn and Settings.
 
-const _pink = Color(0xFFFF5FA2);
-const _gold = Color(0xFFF6D967);
-const _goldMid = Color(0xFFFFEB83);
-const _ink = Color(0xFF1A0033);
-const _soft = Color(0xFFE9DDF5);
+const _pink = Color(0xFFD99A98);
+const _gold = Color(0xFFC9A55C);
+const _goldMid = Color(0xFFE6CF97);
+const _ink = Color(0xFF1F1311);
+const _soft = Color(0xFFEBD9C4);
 const _sans = 'PlusJakartaSans';
 const _serif = 'PlayfairDisplay';
 

@@ -341,7 +341,7 @@ class _AgreeRow extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
                 gradient: agreed
-                    ? const LinearGradient(colors: [SophiaColors.amethystMid, Color(0xFF9877CF)])
+                    ? const LinearGradient(colors: [SophiaColors.amethystMid, Color(0xFFB4505C)])
                     : null,
                 border: agreed ? null : Border.all(color: SophiaColors.lilac.withValues(alpha: 0.4), width: 1.4),
               ),

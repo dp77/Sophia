@@ -7,20 +7,20 @@ import 'package:flutter_svg/flutter_svg.dart';
 class SophiaColors {
   SophiaColors._();
 
-  static const bgTop = Color(0xFF0D0614);
-  static const bgBottom = Color(0xFF1B0D2B);
-  static const panelTop = Color(0xFF140A1F);
-  static const lavender = Color(0xFFE6D6FA);
-  static const lilac = Color(0xFFD9C3F5);
-  static const muted = Color(0xFFA99BB8);
-  static const champagne = Color(0xFFE9D5A8);
-  static const orchid = Color(0xFF8E6BC0);
-  static const amethystMid = Color(0xFF6B42A8);
+  static const bgTop = Color(0xFF140B0A);
+  static const bgBottom = Color(0xFF1F1311);
+  static const panelTop = Color(0xFF1A0F0D);
+  static const lavender = Color(0xFFF2E8D5);
+  static const lilac = Color(0xFFEBD9C4);
+  static const muted = Color(0xFFB8A48A);
+  static const champagne = Color(0xFFE6CF97);
+  static const orchid = Color(0xFFA8434F);
+  static const amethystMid = Color(0xFF8C2F3C);
 
   static const amethyst = LinearGradient(
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
-    colors: [Color(0xFF3A1D63), Color(0xFF6B42A8), Color(0xFF9877CF)],
+    colors: [Color(0xFF5A1A24), Color(0xFF8C2F3C), Color(0xFFB4505C)],
     stops: [0, 0.55, 1],
   );
 

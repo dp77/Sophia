@@ -19,13 +19,13 @@ import '../../widget/pro_card.dart';
 // Watch & Earn — design "A3 · Wallet + ticket".
 // Logic mirrors the existing Watch & Earn flow in settings_tab.dart.
 
-const _pink = Color(0xFFFF5FA2);
-const _gold = Color(0xFFF6D967);
-const _goldLight = Color(0xFFFFFFD7);
-const _goldMid = Color(0xFFFFEB83);
-const _ink = Color(0xFF1A0033);
-const _muted = Color(0xFF8F8B8B);
-const _soft = Color(0xFFE9DDF5);
+const _pink = Color(0xFFD99A98);
+const _gold = Color(0xFFC9A55C);
+const _goldLight = Color(0xFFF7EBC6);
+const _goldMid = Color(0xFFE6CF97);
+const _ink = Color(0xFF1F1311);
+const _muted = Color(0xFF9C8870);
+const _soft = Color(0xFFEBD9C4);
 const _sans = 'PlusJakartaSans';
 const _serif = 'PlayfairDisplay';
 const _ease = Cubic(0.2, 0.8, 0.2, 1);
@@ -326,7 +326,7 @@ class _WalletCard extends StatelessWidget {
               gradient: const LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [Color(0xFF7B2FF7), Color(0xFFB04DFF), _pink],
+                colors: [Color(0xFF8C2F3C), Color(0xFFB4505C), _pink],
                 stops: [0, 0.55, 1],
               ),
               boxShadow: [

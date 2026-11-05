@@ -828,11 +828,11 @@ class _SettingsTabState extends State<SettingsTab>
                                             auth,
                                           );
                                         }),
-                                        icon: const SvgIcon('ic_delete', color: Color(0xFFE8A0B4), size: 18),
+                                        icon: const SvgIcon('ic_delete', color: Color(0xFFD99A98), size: 18),
                                         label: const Text(
                                           'Delete Account',
                                           style: TextStyle(
-                                            color: Color(0xFFE8A0B4),
+                                            color: Color(0xFFD99A98),
                                             fontSize: 13,
                                             fontWeight: FontWeight.w600,
                                           ),
@@ -1163,7 +1163,7 @@ class _ProfileAvatar extends StatelessWidget {
       decoration: const BoxDecoration(
         gradient: RadialGradient(
           center: Alignment(0, -0.3),
-          colors: [Color(0xFF2A1640), SophiaColors.panelTop],
+          colors: [Color(0xFF2E1A16), SophiaColors.panelTop],
         ),
       ),
       alignment: Alignment.center,
@@ -1309,7 +1309,7 @@ class _RateUsDialogState extends State<_RateUsDialog> {
             gradient: const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Color(0xFF221035), SophiaColors.bgTop],
+              colors: [Color(0xFF261512), SophiaColors.bgTop],
             ),
             border: Border.all(color: SophiaColors.champagne.withValues(alpha: 0.35)),
             boxShadow: [
@@ -1366,7 +1366,7 @@ class _RateUsDialogState extends State<_RateUsDialog> {
                                 shape: BoxShape.circle,
                                 gradient: RadialGradient(
                                   center: Alignment(0, -0.3),
-                                  colors: [Color(0xFF2A1640), SophiaColors.panelTop],
+                                  colors: [Color(0xFF2E1A16), SophiaColors.panelTop],
                                 ),
                               ),
                               alignment: Alignment.center,
@@ -1503,7 +1503,7 @@ class _Heart extends StatelessWidget {
                   ? const LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [SophiaColors.champagne, Color(0xFFE8A0B4)],
+                      colors: [SophiaColors.champagne, Color(0xFFD99A98)],
                     )
                   : LinearGradient(colors: [SophiaColors.lilac.withValues(alpha: 0.35), SophiaColors.lilac.withValues(alpha: 0.35)]))
               .createShader(r),
@@ -1600,7 +1600,7 @@ class _FeedbackSheetState extends State<_FeedbackSheet> {
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [const Color(0xFF221035).withValues(alpha: 0.96), SophiaColors.bgTop],
+                colors: [const Color(0xFF261512).withValues(alpha: 0.96), SophiaColors.bgTop],
               ),
               border: Border(top: BorderSide(color: SophiaColors.champagne.withValues(alpha: 0.4))),
             ),
@@ -1655,7 +1655,7 @@ class _FeedbackSheetState extends State<_FeedbackSheet> {
                                 shape: BoxShape.circle,
                                 gradient: RadialGradient(
                                   center: Alignment(0, -0.3),
-                                  colors: [Color(0xFF2A1640), SophiaColors.panelTop],
+                                  colors: [Color(0xFF2E1A16), SophiaColors.panelTop],
                                 ),
                               ),
                               alignment: Alignment.center,
@@ -1780,7 +1780,7 @@ class _FeedbackSheetState extends State<_FeedbackSheet> {
                         AnimatedDefaultTextStyle(
                           duration: const Duration(milliseconds: 200),
                           style: TextStyle(
-                            color: length > _maxChars * 0.9 ? const Color(0xFFE8A0B4) : SophiaColors.muted,
+                            color: length > _maxChars * 0.9 ? const Color(0xFFD99A98) : SophiaColors.muted,
                             fontSize: 11,
                             fontWeight: FontWeight.w600,
                           ),

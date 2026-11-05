@@ -21,13 +21,13 @@ import '../../view_model/user_provider.dart';
 import '../home_screen.dart';
 import 'onboarding_screen.dart';
 // ── Palette (local, so this screen has no dependency on colors.dart) ─────────
-const _pink = Color(0xffFF5FA2);
-const _softPink = Color(0xffFF9CC8);
-const _lavender = Color(0xffE9C8FF);
-const _violet = Color(0xff8E3DFF);
-const _bgTop = Color(0xff1B0733);
-const _bgMid = Color(0xff12041F);
-const _bgBottom = Color(0xff2C0B47);
+const _pink = Color(0xffD99A98);
+const _softPink = Color(0xffE8B9B2);
+const _lavender = Color(0xffF2E8D5);
+const _violet = Color(0xff8C2F3C);
+const _bgTop = Color(0xff1E100D);
+const _bgMid = Color(0xff120A09);
+const _bgBottom = Color(0xff2E1512);
 
 /// Path of the picture shown in the tilted card. Change to your own asset.
 const _cardImage = 'assets/images/logo.webp';
@@ -281,7 +281,7 @@ class _SplashScreenState extends State<SplashScreen>
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: RadialGradient(
-                  colors: [Color(0x442A0E5C), Color(0x00000000)],
+                  colors: [Color(0x445E1C27), Color(0x00000000)],
                 ),
               ),
             ),
@@ -540,7 +540,7 @@ class _SplashScreenState extends State<SplashScreen>
             ),
           ),
           // Material 3 expressive loading indicator (morphing shape)
-          const ExpressiveLoadingIndicator(color: Color(0xffF6D9FF)),
+          const ExpressiveLoadingIndicator(color: Color(0xffF2E8D5)),
         ],
       ),
     );
@@ -706,8 +706,8 @@ class _WavesPainter extends CustomPainter {
       1.0,
       2,
       0.0,
-      Color(0xff6A2BB8),
-      Color(0xff1E0838),
+      Color(0xff7A2533),
+      Color(0xff22110E),
       0.55,
     ),
     _WaveLayer(
@@ -716,8 +716,8 @@ class _WavesPainter extends CustomPainter {
       1.3,
       -3,
       1.6,
-      Color(0xffC04AA8),
-      Color(0xff2A0B47),
+      Color(0xffA8434F),
+      Color(0xff2E1512),
       0.70,
     ),
     _WaveLayer(
@@ -726,8 +726,8 @@ class _WavesPainter extends CustomPainter {
       1.7,
       4,
       3.1,
-      Color(0xff9B3FD6),
-      Color(0xff2C0B47),
+      Color(0xff8C2F3C),
+      Color(0xff2E1512),
       0.85,
     ),
   ];

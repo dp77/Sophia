@@ -12,9 +12,9 @@ import 'sophia_style.dart';
 
 enum SophiaTone { normal, danger, gold }
 
-const _rose = Color(0xFFE8A0B4);
-const _roseDeep = Color(0xFFB4506C);
-const _gold = Color(0xFFF6D967);
+const _rose = Color(0xFFD99A98);
+const _roseDeep = Color(0xFF8C2F3C);
+const _gold = Color(0xFFC9A55C);
 
 Future<T?> showSophiaDialog<T>({
   required BuildContext context,
@@ -80,7 +80,7 @@ class SophiaDialog extends StatelessWidget {
             gradient: const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [Color(0xFF221035), SophiaColors.bgTop],
+              colors: [Color(0xFF261512), SophiaColors.bgTop],
             ),
             border: Border.all(color: _accent.withValues(alpha: 0.35)),
             boxShadow: [
@@ -180,7 +180,7 @@ class _Ring extends StatelessWidget {
             margin: const EdgeInsets.all(3),
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
-              gradient: RadialGradient(center: Alignment(0, -0.3), colors: [Color(0xFF2A1640), SophiaColors.panelTop]),
+              gradient: RadialGradient(center: Alignment(0, -0.3), colors: [Color(0xFF2E1A16), SophiaColors.panelTop]),
             ),
             alignment: Alignment.center,
             child: child,
@@ -192,8 +192,8 @@ class _Ring extends StatelessWidget {
 }
 
 List<Color> _ringColors(SophiaTone tone) => switch (tone) {
-  SophiaTone.danger => const [_rose, _roseDeep, Color(0xFFF2C6D2), _rose],
-  SophiaTone.gold => const [_gold, Color(0xFFFFFFD7), Color(0xFFFFEB83), _gold],
+  SophiaTone.danger => const [_rose, _roseDeep, Color(0xFFEBC3BE), _rose],
+  SophiaTone.gold => const [_gold, Color(0xFFF7EBC6), Color(0xFFE6CF97), _gold],
   SophiaTone.normal => const [SophiaColors.champagne, SophiaColors.orchid, SophiaColors.lilac, SophiaColors.champagne],
 };
 
@@ -260,7 +260,7 @@ class SophiaDangerButton extends StatelessWidget {
         height: 52,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(26),
-          gradient: const LinearGradient(colors: [_roseDeep, Color(0xFFD9768F)]),
+          gradient: const LinearGradient(colors: [_roseDeep, Color(0xFFB4505C)]),
           border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
           boxShadow: [
             BoxShadow(color: _roseDeep.withValues(alpha: 0.6), blurRadius: 24, spreadRadius: -10, offset: const Offset(0, 10)),
@@ -292,7 +292,7 @@ class SophiaGoldButton extends StatelessWidget {
         height: 52,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(26),
-          gradient: const LinearGradient(colors: [_gold, Color(0xFFFFEB83), _gold]),
+          gradient: const LinearGradient(colors: [_gold, Color(0xFFE6CF97), _gold]),
           boxShadow: [BoxShadow(color: _gold.withValues(alpha: 0.35), blurRadius: 24, offset: const Offset(0, 8))],
         ),
         child: ClipRRect(
@@ -303,7 +303,7 @@ class SophiaGoldButton extends StatelessWidget {
               Center(
                 child: Text(
                   label,
-                  style: const TextStyle(color: Color(0xFF1A0033), fontSize: 15, fontWeight: FontWeight.w800),
+                  style: const TextStyle(color: Color(0xFF1F1311), fontSize: 15, fontWeight: FontWeight.w800),
                 ),
               ),
             ],

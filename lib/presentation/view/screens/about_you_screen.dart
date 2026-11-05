@@ -255,7 +255,7 @@ class _AboutYouScreenState extends State<AboutYouScreen> {
               shape: BoxShape.circle,
               gradient: RadialGradient(
                 center: Alignment(0, -0.3),
-                colors: [Color(0xFF2A1640), SophiaColors.panelTop],
+                colors: [Color(0xFF2E1A16), SophiaColors.panelTop],
               ),
             ),
             alignment: Alignment.center,

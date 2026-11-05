@@ -266,7 +266,7 @@ class _TimerBlock extends StatelessWidget {
       width: 54,
       height: 54,
       decoration: BoxDecoration(
-        color: const Color(0xFF0E0A1F),
+        color: const Color(0xFF120B09),
         borderRadius: BorderRadius.circular(8),
         border: Border.all(color: Colors.white.withValues(alpha: 0.12)),
       ),

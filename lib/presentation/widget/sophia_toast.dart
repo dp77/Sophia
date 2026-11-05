@@ -61,7 +61,7 @@ class SophiaToast {
   }
 }
 
-const _rose = Color(0xFFE8A0B4);
+const _rose = Color(0xFFD99A98);
 
 class _ToastView extends StatefulWidget {
   final String text;
@@ -154,7 +154,7 @@ class _ToastViewState extends State<_ToastView> with SingleTickerProviderStateMi
                       borderRadius: BorderRadius.circular(22),
                       gradient: LinearGradient(
                         colors: [
-                          const Color(0xFF221035).withValues(alpha: 0.92),
+                          const Color(0xFF261512).withValues(alpha: 0.92),
                           SophiaColors.bgTop.withValues(alpha: 0.92),
                         ],
                       ),

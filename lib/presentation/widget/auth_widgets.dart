@@ -8,9 +8,9 @@ import 'package:girlfriend/presentation/widget/sophia_style.dart';
 
 /// Shared pieces of the Sign in and Create account screens.
 
-const _fieldLabel = Color(0xFFC9BBD8);
-const _bubbleText = Color(0xFFF3EAFE);
-const _onlineGreen = Color(0xFF7EE2A8);
+const _fieldLabel = Color(0xFFC8B59C);
+const _bubbleText = Color(0xFFF2E8D5);
+const _onlineGreen = Color(0xFF9BC48A);
 
 /// Her photo across the top, fading into the plum background, with the back
 /// button and a chat bubble from Sophia on its lower edge.
@@ -46,7 +46,7 @@ class AuthHero extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 stops: [0, 0.35],
-                colors: [Color(0x660D0614), Color(0x000D0614)],
+                colors: [Color(0x66140B0A), Color(0x00140B0A)],
               ),
             ),
           ),
@@ -74,7 +74,7 @@ class _BackButton extends StatelessWidget {
           height: 44,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: const Color(0x8C1A0033),
+            color: const Color(0x8C1F1311),
             border: Border.all(color: Colors.white.withValues(alpha: 0.22)),
           ),
           child: const Center(child: SvgIcon('ic_back', size: 20)),
@@ -129,7 +129,7 @@ class _SophiaBubble extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.fromLTRB(14, 10, 14, 10),
                   decoration: BoxDecoration(
-                    color: const Color(0xB8281440),
+                    color: const Color(0xB82E1814),
                     borderRadius: _radius,
                     border: Border.all(color: SophiaColors.lilac.withValues(alpha: 0.22)),
                   ),
@@ -277,7 +277,7 @@ class AuthField extends StatelessWidget {
             contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 17),
             errorStyle: const TextStyle(fontSize: 12),
             enabledBorder: _border(SophiaColors.lilac.withValues(alpha: 0.18)),
-            focusedBorder: _border(const Color(0xFFCFB2FF), 1.3),
+            focusedBorder: _border(const Color(0xFFE6CF97), 1.3),
             errorBorder: _border(Colors.redAccent),
             focusedErrorBorder: _border(Colors.redAccent, 1.3),
           ),

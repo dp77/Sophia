@@ -12,15 +12,15 @@ import 'package:girlfriend/data/analytics/analytics_service.dart';
 // Usage:
 //   OnboardingScreen(onFinish: () { /* save flag + go to login/home */ })
 
-const _darkBlue = Color(0xFF0B0014);
-const _darkPurple = Color(0xFF1A0033);
-const _violet = Color(0xFF7B2FF7);
-const _lightViolet = Color(0xFF9A67FF);
-const _extraLightViolet = Color(0xFFCFB2FF);
-const _lightPink = Color(0xFFCC81FF);
-const _gray = Color(0xFFB7B1BC);
-const _pink = Color(0xFFFF5FA2);
-const _online = Color(0xFF4ADE80);
+const _darkBlue = Color(0xFF140B0A);
+const _darkPurple = Color(0xFF1F1311);
+const _violet = Color(0xFF8C2F3C);
+const _lightViolet = Color(0xFFB4505C);
+const _extraLightViolet = Color(0xFFE6CF97);
+const _lightPink = Color(0xFFD99A98);
+const _gray = Color(0xFFB8A48A);
+const _pink = Color(0xFFD99A98);
+const _online = Color(0xFF9BC48A);
 
 const _sans = 'PlusJakartaSans';
 const _serif = 'PlayfairDisplay';
@@ -221,7 +221,7 @@ class _WelcomePage extends StatelessWidget {
                       _darkBlue.withValues(alpha: 0.55),
                       _darkBlue.withValues(alpha: 0),
                       Colors.transparent,
-                      const Color(0xFF14002A),
+                      const Color(0xFF170C0A),
                     ],
                   ),
                 ),
@@ -1370,7 +1370,7 @@ class _Bubble extends StatelessWidget {
             BoxShadow(
               color: fromMe
                   ? _violet.withValues(alpha: 0.45)
-                  : const Color(0xFF110020).withValues(alpha: 0.6),
+                  : const Color(0xFF0D0706).withValues(alpha: 0.6),
               blurRadius: 30,
               offset: const Offset(0, 10),
             ),
@@ -1605,7 +1605,7 @@ class _PromptPill extends StatelessWidget {
         border: Border.all(color: _extraLightViolet.withValues(alpha: 0.3)),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF110020).withValues(alpha: 0.7),
+            color: const Color(0xFF0D0706).withValues(alpha: 0.7),
             blurRadius: 30,
             offset: const Offset(0, 12),
           ),
@@ -1620,7 +1620,7 @@ class _PromptPill extends StatelessWidget {
             decoration: const BoxDecoration(
               shape: BoxShape.circle,
               gradient: LinearGradient(
-                colors: [Color(0xFF6F30EE), Color(0xFFDC1FFF)],
+                colors: [Color(0xFF7A2533), Color(0xFFB4505C)],
               ),
             ),
             child: Transform.rotate(

@@ -5,8 +5,8 @@ class AppGradients {
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
     colors: [
-      Color(0xFF6F30EE), // #6F30EE
-      Color(0xFFDC1FFF), // #DC1FFF
+      Color(0xFF7A2533), // #6F30EE
+      Color(0xFFB4505C), // #DC1FFF
     ],
   );
 }
