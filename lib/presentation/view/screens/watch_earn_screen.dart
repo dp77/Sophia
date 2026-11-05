@@ -277,9 +277,9 @@ class _WatchEarnScreenState extends State<WatchEarnScreen>
               TextSpan(
                 text: '&',
                 style: TextStyle(
-                  fontFamily: _serif,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.w600,
+                  fontFamily: sophiaScript,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 26,
                   color: _pink,
                 ),
               ),

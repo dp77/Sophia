@@ -465,10 +465,9 @@ class _SplashScreenState extends State<SplashScreen>
           child: const Text(
             'Sophia',
             style: TextStyle(
-              fontFamily: 'PlayfairDisplay',
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.w600,
-              fontSize: 66,
+              fontFamily: 'GreatVibes',
+              fontWeight: FontWeight.w400,
+              fontSize: 80,
               height: 1.1,
               color: Colors.white,
             ),

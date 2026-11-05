@@ -541,11 +541,10 @@ class _EmptyChats extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: SophiaColors.lavender,
-                        fontSize: 25,
+                        fontSize: 31,
                         height: 1.2,
-                        fontWeight: FontWeight.w600,
-                        fontStyle: FontStyle.italic,
-                        fontFamily: sophiaSerif,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: sophiaScript,
                       ),
                     ),
                     SizedBox(height: 10),
@@ -791,10 +790,9 @@ class _ShimmerTitle extends StatelessWidget {
         text,
         style: const TextStyle(
           color: Colors.white,
-          fontSize: 25,
-          fontWeight: FontWeight.w600,
-          fontStyle: FontStyle.italic,
-          fontFamily: sophiaSerif,
+          fontSize: 31,
+          fontWeight: FontWeight.w400,
+          fontFamily: sophiaScript,
         ),
       ),
     );

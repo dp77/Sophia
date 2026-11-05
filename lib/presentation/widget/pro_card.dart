@@ -4,6 +4,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:girlfriend/core/colors.dart';
+import 'package:girlfriend/presentation/widget/sophia_style.dart';
 
 // "Sophia Pro" promo card — shared by Watch & Earn and Settings.
 
@@ -13,7 +14,6 @@ const _goldMid = Color(0xFFE6CF97);
 const _ink = Color(0xFF1F1311);
 const _soft = Color(0xFFEBD9C4);
 const _sans = 'PlusJakartaSans';
-const _serif = 'PlayfairDisplay';
 
 const _proPhotos = [
   'assets/images/onboard1.png',
@@ -138,9 +138,9 @@ class ProCard extends StatelessWidget {
                               TextSpan(
                                 text: 'Just talk.',
                                 style: TextStyle(
-                                  fontFamily: _serif,
-                                  fontStyle: FontStyle.italic,
-                                  fontWeight: FontWeight.w600,
+                                  fontFamily: sophiaScript,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 31,
                                   color: _pink,
                                 ),
                               ),

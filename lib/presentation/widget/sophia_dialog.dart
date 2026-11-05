@@ -115,11 +115,10 @@ class SophiaDialog extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           color: SophiaColors.lavender,
-                          fontSize: 25,
+                          fontSize: 31,
                           height: 1.2,
-                          fontWeight: FontWeight.w600,
-                          fontStyle: FontStyle.italic,
-                          fontFamily: sophiaSerif,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: sophiaScript,
                         ),
                       ),
                       if (message != null) ...[

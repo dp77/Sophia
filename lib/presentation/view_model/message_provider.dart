@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:girlfriend/presentation/widget/sophia_toast.dart';
+import 'package:girlfriend/presentation/widget/love_letter_ui.dart';
 import 'dart:async';
 import 'package:uuid/uuid.dart';
 import '../../data/api_service/api_caller.dart';
@@ -541,7 +542,12 @@ class MessageProvider with ChangeNotifier {
             _refreshImageStatusPolling();
 
             if (NotificationHelper.currentCompanionId != companionId) {
-              SophiaToast.show(msg: 'You have a new message from $name! ✨', type: ToastType.info, duration: const Duration(seconds: 4));
+              LoveLetterPost.deliver(
+                companionId: companionId,
+                name: name ?? '',
+                imageUrl: imageUrl ?? '',
+                text: responseText,
+              );
             }
             // update chat list with assistant reply
             if (chatListProvider != null) {

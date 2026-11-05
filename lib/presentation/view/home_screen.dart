@@ -6,9 +6,8 @@ import 'package:girlfriend/presentation/view/screens/premium_screen.dart';
 import 'package:girlfriend/presentation/view/tabs/chat_tab.dart';
 import 'package:girlfriend/presentation/view/tabs/generate_tab.dart';
 import 'package:girlfriend/presentation/view/tabs/home_tab.dart';
+import 'package:girlfriend/presentation/view/tabs/letters_tab.dart';
 import 'package:girlfriend/presentation/widget/app_background.dart';
-import 'package:girlfriend/presentation/widget/sophia_skeleton.dart';
-import 'package:girlfriend/presentation/widget/sophia_style.dart';
 import 'package:girlfriend/presentation/widget/navbar_widget.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 import '../../data/api_service/api_caller.dart';
@@ -16,12 +15,11 @@ import 'package:girlfriend/presentation/view/tabs/settings_tab.dart';
 import 'package:girlfriend/presentation/view_model/user_provider.dart';
 import 'package:girlfriend/presentation/view/screens/about_you_screen.dart';
 import 'package:provider/provider.dart';
-import '../../data/model/reel_model.dart';
 import '../../data/analytics/analytics_service.dart';
+import '../../data/love_letters.dart';
 import '../../data/navigation_service.dart';
 import '../../data/rate_prompt.dart';
 import '../widget/navbar_notch_painter.dart';
-import 'tabs/reel_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -36,9 +34,6 @@ class _HomeScreenState extends State<HomeScreen>
   final UpdateDialogManager _updateDialogManager = UpdateDialogManager();
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
-  ReelsData? reelsData;
-  bool isLoading = false;
-
   @override
   void initState() {
     super.initState();
@@ -49,7 +44,6 @@ class _HomeScreenState extends State<HomeScreen>
       context: 'main_navigation',
     );
     RatePrompt.recordSession();
-    initReels();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (mounted) {
         _checkName();
@@ -86,33 +80,6 @@ class _HomeScreenState extends State<HomeScreen>
       if (mounted) {
         NavigationService.navigateToScreenFromBottom(context, PremiumScreen());
       }
-    });
-  }
-
-  Future<void> initReels() async {
-    setState(() {
-      isLoading = true;
-    });
-    const minDuration = Duration(milliseconds: 600);
-    final minimumDelayFuture = Future.delayed(minDuration);
-    final getReelFuture = ReelsData.getReelsData();
-    final List<dynamic> results;
-    try {
-      results = await Future.wait([getReelFuture, minimumDelayFuture]);
-    } catch (e) {
-      // Failed request: stop loading so the Reels tab shows the retry card.
-      debugPrint('initReels failed: $e');
-      if (mounted) setState(() => isLoading = false);
-      return;
-    }
-    if (!mounted) return;
-    ReelsData dataApi = results[0];
-    setState(() {
-      reelsData = dataApi;
-    });
-    await Future.delayed(const Duration(milliseconds: 800));
-    setState(() {
-      isLoading = false;
     });
   }
 
@@ -223,10 +190,47 @@ class _HomeScreenState extends State<HomeScreen>
                         onTap: () => _selectTab(3, 'GenerateTab'),
                       ),
                       Spacer(),
-                      NavbarWidget(
-                        image: _selectedIndex == 1 ? 'nav_reel_fill' : 'nav_reel',
-                        isActive: _selectedIndex == 1,
-                        onTap: () => _selectTab(1, 'ReelsTab'),
+                      Stack(
+                        clipBehavior: Clip.none,
+                        children: [
+                          NavbarWidget(
+                            image: _selectedIndex == 1 ? 'nav_letter_fill' : 'nav_letter',
+                            isActive: _selectedIndex == 1,
+                            onTap: () => _selectTab(1, 'LettersTab'),
+                          ),
+                          Consumer<LoveLetters>(
+                            builder: (context, inbox, _) {
+                              final unread = inbox.unreadCount;
+                              if (unread == 0) return const SizedBox.shrink();
+                              return Positioned(
+                                top: 8,
+                                right: 6,
+                                child: IgnorePointer(
+                                  child: Container(
+                                    constraints: const BoxConstraints(minWidth: 17),
+                                    height: 17,
+                                    padding: const EdgeInsets.symmetric(horizontal: 4),
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFB4505C),
+                                      borderRadius: BorderRadius.circular(9),
+                                      border: Border.all(color: const Color(0xFF1A0F0D), width: 1.5),
+                                    ),
+                                    child: Text(
+                                      unread > 9 ? '9+' : '$unread',
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 9.5,
+                                        fontWeight: FontWeight.w800,
+                                        height: 1,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                        ],
                       ),
                       NavbarWidget(
                         image: _selectedIndex == 4 ? 'nav_profile_fill' : 'nav_profile',
@@ -250,21 +254,7 @@ class _HomeScreenState extends State<HomeScreen>
       index: _selectedIndex,
       children: [
         HomeTab(),
-        if (reelsData == null || reelsData!.reels.isEmpty) ...[
-          isLoading
-              ? const ReelSkeleton()
-              : Container(
-                  decoration: const BoxDecoration(
-                    gradient: SophiaColors.background,
-                  ),
-                  child: SophiaRetryCard(
-                    title: "Couldn't load reels",
-                    onRetry: initReels,
-                  ),
-                ),
-        ] else ...[
-          ReelTab(reelsData: reelsData!),
-        ],
+        LettersTab(onExplore: () => _selectTab(0, 'HomeTab')),
         ChatTab(),
         GenerateTab(),
         SettingsTab(

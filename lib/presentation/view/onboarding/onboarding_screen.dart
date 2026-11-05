@@ -255,10 +255,9 @@ class _WelcomePage extends StatelessWidget {
                     const Text(
                       'Sophia',
                       style: TextStyle(
-                        fontFamily: _serif,
-                        fontStyle: FontStyle.italic,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 22,
+                        fontFamily: sophiaScript,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 27,
                         color: Colors.white,
                       ),
                     ),
@@ -820,7 +819,7 @@ class _GeneratePage extends StatelessWidget {
               TextSpan(
                 style: _headline(32),
                 children: [
-                  const TextSpan(text: 'Photos & reels,\n'),
+                  const TextSpan(text: 'Photos & letters,\n'),
                   _accent('made for you'),
                 ],
               ),
@@ -831,7 +830,7 @@ class _GeneratePage extends StatelessWidget {
             t: t,
             delay: 0.45,
             child: const Text(
-              'Describe a moment and generate new photos of your companion, then watch her reels.',
+              'Describe a moment and generate new photos of your companion, and read the love letters she writes you.',
               style: _body,
             ),
           ),
@@ -996,9 +995,9 @@ TextStyle _headline(double size) => TextStyle(
 TextSpan _accent(String text) => TextSpan(
   text: text,
   style: const TextStyle(
-    fontFamily: _serif,
-    fontStyle: FontStyle.italic,
-    fontWeight: FontWeight.w600,
+    fontFamily: sophiaScript,
+    fontWeight: FontWeight.w400,
+    fontSize: 42,
     color: _pink,
   ),
 );

@@ -191,10 +191,9 @@ class AuthHeading extends StatelessWidget {
         Text(
           title,
           style: const TextStyle(
-            fontFamily: sophiaSerif,
-            fontStyle: FontStyle.italic,
-            fontWeight: FontWeight.w600,
-            fontSize: 33,
+            fontFamily: sophiaScript,
+            fontWeight: FontWeight.w400,
+            fontSize: 41,
             height: 1.1,
             color: SophiaColors.lavender,
           ),

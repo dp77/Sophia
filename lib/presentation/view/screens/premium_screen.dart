@@ -4,6 +4,7 @@ import 'dart:io';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:girlfriend/presentation/widget/sophia_dialog.dart';
+import 'package:girlfriend/presentation/widget/sophia_style.dart';
 import 'package:grokbot_widget/grokbot_widget.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:girlfriend/presentation/widget/sophia_toast.dart';
@@ -27,7 +28,6 @@ const _online = Color(0xFF9BC48A);
 const _muted = Color(0xFF9C8870);
 const _heroFade = Color(0xFF160C0A);
 const _sans = 'PlusJakartaSans';
-const _serif = 'PlayfairDisplay';
 const _ease = Cubic(0.2, 0.8, 0.2, 1);
 
 /// Show both weekly and monthly subscription plans.
@@ -469,9 +469,9 @@ class _PremiumUpgradeScreenState extends State<PremiumScreen>
                 TextSpan(
                   text: 'Full Access',
                   style: TextStyle(
-                    fontFamily: _serif,
-                    fontStyle: FontStyle.italic,
-                    fontWeight: FontWeight.w600,
+                    fontFamily: sophiaScript,
+                    fontWeight: FontWeight.w400,
+                    fontSize: 42,
                     color: _pink,
                   ),
                 ),

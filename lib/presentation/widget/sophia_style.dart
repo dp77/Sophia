@@ -33,6 +33,13 @@ class SophiaColors {
 
 const sophiaSerif = 'PlayfairDisplay';
 
+/// Script face for large titles. Its lowercase runs small, so set it about
+/// 1.24x the size the serif would use.
+const sophiaScript = 'GreatVibes';
+
+/// Handwriting face for letter text.
+const sophiaHand = 'Caveat';
+
 /// Repeating animation driver; holds still when the OS asks to reduce motion.
 class LoopAnimation extends StatefulWidget {
   final Duration duration;

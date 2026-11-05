@@ -19,6 +19,7 @@ import 'package:shimmer_animation/shimmer_animation.dart';
 import '../../../core/colors.dart';
 import '../../widget/coin_widget.dart';
 import '../../widget/sophia_skeleton.dart';
+import '../../widget/sophia_style.dart';
 import '../screens/chat_screen.dart';
 
 class HomeTab extends StatefulWidget {
@@ -80,9 +81,9 @@ class _HomeTabState extends State<HomeTab> {
                         'Welcome Back Baby,',
                         style: TextStyle(
                           color: extraLightViolet,
-                          fontSize: 25,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'PlayfairDisplay',
+                          fontSize: 31,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: sophiaScript,
                         ),
                       ),
                     ],

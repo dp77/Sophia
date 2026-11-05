@@ -149,29 +149,6 @@ mixin class ApiCaller {
     }
   }
 
-  Future<Either<Failure, Response>> reportReels(
-    String reelId,
-    String gfId,
-    String userId,
-    String description,
-  ) async {
-    final data = {
-      "reels_id": reelId,
-      "gf_id": gfId,
-      "user_id": userId,
-      "description": description,
-    };
-    try {
-      final response = await dio.post('/reels/report', data: data);
-      return right(response);
-    } catch (e) {
-      if (e is DioException) {
-        return left(ServerFailure.fromDioError(e));
-      }
-      return left(ServerFailure(e.toString()));
-    }
-  }
-
   Future<Either<Failure, Response>> clearChatHistory(
     String userId,
     String companionId,

@@ -17,7 +17,10 @@ import 'data/analytics/analytics_service.dart';
 import 'data/api_service/api_initializer.dart';
 import 'data/chat_language_storage.dart';
 import 'core/colors.dart';
+import 'data/love_letters.dart';
 import 'data/navigation_service.dart';
+import 'data/notification_helper.dart';
+import 'presentation/widget/love_letter_ui.dart';
 import 'presentation/view_model/chat_list_provider.dart';
 import 'presentation/view_model/generation_provider.dart';
 import 'presentation/view_model/girlfriend_provider.dart';
@@ -64,6 +67,8 @@ void main() async {
   await _initializeServices();
   await Haptics.init();
   await NotificationService.instance.init();
+  await LoveLetters.instance.load();
+  _listenForLetters();
   runApp(
     MultiProvider(
       providers: [
@@ -74,6 +79,7 @@ void main() async {
         ChangeNotifierProvider(create: (_) => AuthProvider()),
         ChangeNotifierProvider(create: (_) => WatchEarnStatusProvider()),
         ChangeNotifierProvider(create: (_) => UserCharacterProvider()),
+        ChangeNotifierProvider.value(value: LoveLetters.instance),
         ChangeNotifierProvider(
           create: (context) {
             final generationProvider = GenerationProvider();
@@ -86,6 +92,37 @@ void main() async {
       child: MyApp(),
     ),
   );
+}
+
+/// A companion's push becomes a love letter: while the app is open it slides in
+/// as the letter banner instead of a system notification, and a tapped one
+/// waits in the Letters tab. Pushes that don't name a companion are untouched.
+void _listenForLetters() {
+  OneSignal.Notifications.addForegroundWillDisplayListener((event) {
+    final push = LoveLetterPost.fromPush(event.notification);
+    if (push == null) return;
+    event.preventDefault();
+    LoveLetterPost.deliver(
+      id: event.notification.notificationId,
+      companionId: push.companionId,
+      name: push.name,
+      imageUrl: push.imageUrl,
+      text: push.text,
+      announce: NotificationHelper.currentCompanionId != push.companionId,
+    );
+  });
+  OneSignal.Notifications.addClickListener((event) {
+    final push = LoveLetterPost.fromPush(event.notification);
+    if (push == null) return;
+    LoveLetterPost.deliver(
+      id: event.notification.notificationId,
+      companionId: push.companionId,
+      name: push.name,
+      imageUrl: push.imageUrl,
+      text: push.text,
+      announce: false,
+    );
+  });
 }
 
 Future<void> _initConsent() async {
