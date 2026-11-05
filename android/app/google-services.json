@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "499976394124",
+    "project_id": "ai-girlfriend-59683",
+    "storage_bucket": "ai-girlfriend-59683.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499976394124:android:aa7d18faf5e89a2ef8b2a9",
+        "android_client_info": {
+          "package_name": "com.diapp.girlfriend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499976394124-13ooonm1e6lsqfv6k42lgem5c13bb7qh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaLL63NsgZalQG2-PK5cILDjJyXcT5CtQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499976394124-13ooonm1e6lsqfv6k42lgem5c13bb7qh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "499976394124-vqob970hcnbgls080drrf7jnjo7c48uf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.diapp.girlfriend"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
